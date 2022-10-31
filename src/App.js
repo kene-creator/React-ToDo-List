@@ -1,10 +1,12 @@
 import "./App.css";
 import TodoContainer from "./components/TodoContainer";
 import React from "react";
+import Header from "./components/Header";
 
 function App() {
   return (
     <React.Fragment>
+      <Header />
       <TodoContainer />
     </React.Fragment>
   );
