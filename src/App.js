@@ -2,17 +2,19 @@ import "./App.css";
 import TodoContainer from "./components/TodoContainer";
 import React from "react";
 import Header from "./components/Header";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
     <React.Fragment>
+      <Navigation />
       <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<TodoContainer />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<TodoContainer />}></Route>
+        <Route path="/about" element={<About />}></Route>
+      </Routes>
     </React.Fragment>
   );
 }
