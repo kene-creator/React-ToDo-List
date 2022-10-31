@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaTrash } from "react-icons/fa";
+
 const TodoItem = (props) => {
   const [edit, setEdit] = useState(false);
 
@@ -42,7 +44,7 @@ const TodoItem = (props) => {
         onKeyDown={handleUpdatedDone}
       />
       <button onClick={() => props.deleteTodoProps(props.todo.id)}>
-        Delete
+        <FaTrash style={{ color: "orangered", fontSize: "16px" }} />
       </button>
     </li>
   );

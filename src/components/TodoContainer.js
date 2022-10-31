@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TodosList from "./TodosList";
 import InputTodo from "./InputTodo";
 import { v4 as uuidv4 } from "uuid";
@@ -7,6 +7,7 @@ class TodoContainer extends React.Component {
   state = {
     todos: [],
   };
+
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/todos?_limit=10")
       .then((response) => response.json())
