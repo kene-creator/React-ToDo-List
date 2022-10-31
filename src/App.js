@@ -7,10 +7,10 @@ import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <React.Fragment>
+      <Header />
       <BrowserRouter>
-        <Header />
         <Routes>
-          <Route path="/" element={<TodoContainer />}></Route>
+          <Route index element={<TodoContainer />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>
