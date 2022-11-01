@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { FaPlusCircle } from "react-icons/fa";
+/* eslint-disable */
+import React, { useState } from 'react';
+import { FaPlusCircle } from 'react-icons/fa';
 
 const InputTodo = (props) => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
 
   const titleChangeHandler = (e) => {
     setTitle(e.target.value);
@@ -13,7 +14,7 @@ const InputTodo = (props) => {
     if (title.trim()) {
       props.addTodoProps(title);
     }
-    setTitle("");
+    setTitle('');
   };
 
   return (
@@ -27,9 +28,9 @@ const InputTodo = (props) => {
         name="title"
       />
       <button className="input-submit">
-        {" "}
+        {' '}
         <FaPlusCircle
-          style={{ color: "darkcyan", fontSize: "20px", marginTop: "2px" }}
+          style={{ color: 'darkcyan', fontSize: '20px', marginTop: '2px' }}
         />
       </button>
     </form>

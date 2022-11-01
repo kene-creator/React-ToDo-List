@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { FaTrash } from "react-icons/fa";
+/* eslint-disable */
+import React, { useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
 
 const TodoItem = (props) => {
   const [edit, setEdit] = useState(false);
@@ -9,18 +10,18 @@ const TodoItem = (props) => {
   };
 
   const handleUpdatedDone = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       setEdit(false);
     }
   };
 
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
 
   if (edit) {
-    viewMode.display = "none";
+    viewMode.display = 'none';
   } else {
-    editMode.display = "none";
+    editMode.display = 'none';
   }
   return (
     <li className="item">
@@ -44,7 +45,7 @@ const TodoItem = (props) => {
         onKeyDown={handleUpdatedDone}
       />
       <button onClick={() => props.deleteTodoProps(props.todo.id)}>
-        <FaTrash style={{ color: "orangered", fontSize: "16px" }} />
+        <FaTrash style={{ color: 'orangered', fontSize: '16px' }} />
       </button>
     </li>
   );

@@ -1,10 +1,11 @@
-import "./App.css";
-import TodoContainer from "./components/TodoContainer";
-import React from "react";
-import Header from "./components/Header";
-import { Routes, Route } from "react-router-dom";
-import About from "./pages/About";
-import Navigation from "./components/Navigation";
+/* eslint-disable */
+import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import TodoContainer from './components/TodoContainer';
+import Header from './components/Header';
+import About from './pages/About';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
